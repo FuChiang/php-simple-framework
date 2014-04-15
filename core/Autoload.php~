@@ -1,0 +1,20 @@
+<?php
+
+//nullify any existing autoloads
+spl_autoload_register(null, false);
+
+//class Loader
+function autoload($fileName)
+{
+	print $fileName;
+	require_once  ucfirst($fileName) . '.php';
+}
+
+//register the loader functions
+spl_autoload_register('autoload');
+
+
+
+
+
+

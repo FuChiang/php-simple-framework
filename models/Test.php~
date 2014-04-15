@@ -1,0 +1,16 @@
+<?php
+
+
+class Test
+{
+	public function __construct()
+	{
+		print 'call';
+	}
+
+	public function show()
+	{
+		print 'success call model';
+	}
+
+}

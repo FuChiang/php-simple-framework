@@ -1,0 +1,25 @@
+<?php
+
+/*
+|----------------------------------------------------------------------
+| CONTROLLER TEST
+|----------------------------------------------------------------------
+|1.	If you  have send any parameter then you should write parameter variable 
+|	in () of function which pirority position set is the same web link. 
+|2.	The file name must same the class name and first char with a capital letter. 	
+*/
+
+class Main extends ControllerBase
+{
+	public function index()
+	{
+		$testModel = $this->loadModel('all/Model');
+		$testModel->show();
+		print '<br>';
+		$testHelper = $this->loadHelper('all/Myprocess');
+		$testHelper->show();
+	}
+}
+
+
+

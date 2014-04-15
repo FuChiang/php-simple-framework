@@ -1,0 +1,16 @@
+
+
+#open rewrite
+RewriteEngine on
+
+#base path
+RewriteBase /
+
+#if is not local file then rewrite 
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#if is not local directory then rewrite
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#rewrite rule
+RewriteRule ^(.*)$ /index.php/$1 [L]
